@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <div id="box"></div>
+    <script>
+        s1 = '';
+
+        images = [
+            { height: 500, width: "300px", path: "images/summer.jpg" },
+            { height: 400, width: "200px", path: "images/winter.jpg" },
+            { height: 300, width: "400px", path: "images/spring.jpg" }
+        ]
+        for (let i = 0; i < images.length; i++) {
+           
+            
+        
+            
+                path = images[i].path; //безымянные автоматически пронумеровались
+                width = images[i].width;
+                height = images[i].height;
+
+                s1 += `<img src = ${path} style = "height: ${height}px; width:${width}"  >`;
+            
+        }
+        console.log(images);
+        box.innerHTML = s1;
+    </script>
+
+</body>
+
+</html>

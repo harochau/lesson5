@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <div id="box"></div>
+    <script>
+        s1 = '';
+
+        images = [
+            { pic1: { height: 500, width: "300px", path: "images/summer.jpg" } },
+            { pic2: { height: 400, width: "200px", path: "images/winter.jpg" } },
+            { pic3: { height: 300, width: "400px", path: "images/spring.jpg" } }
+        ]
+        for (key in images){
+            for (key2 in images[key]){ //перебор единственного элемента
+            path = images[key][key2].path;
+            width = images[key][key2].width;
+            height = images[key][key2].height;
+
+            s1 += `<img src = ${path} style = "height: ${height}px; width:${width}"  >`;
+        }
+        }
+        box.innerHTML = s1;
+    </script>
+
+</body>
+
+</html>
