@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let menu = {width: 300,
+    height: 200,
+    title: "Menu"
+}
+    sum = 0;
+    for (key in menu){
+        sum++;
+        s1 = ' '.repeat("Свойство".length - key.length+5);
+        console.log(s1.length);
+        alert(`Свойство : Значение \n${key}${s1}:${s1}${menu[key]}`);
+    }
+    alert(sum);
+    </script>
+</body>
+</html>

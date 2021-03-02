@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = { name: 'Вася' };
+        let admin = user;
+        admin.name = 'Петя';
+        // alert(`Имя в admin: ${admin.name}\nИмя в user: ${user.name}`);
+        let user2 = {
+            name: 'Вася',
+            age: 30,
+        }
+        let clone1 = {};
+        for (let key in user2) {
+            clone1[key] = user2[key];
+
+        }
+        for (let key in clone1) {
+            alert(`В user2.${key} : ${user2[key]}\nВ clone1.${key} : ${clone1[key]}`)
+        }
+        // console.log(clone1);
+        user2.age = 46;
+        clone1.name = 'Ира';
+        for (let key in clone1) {
+            alert(`В user2.${key} : ${user2[key]}\nВ clone1.${key} : ${clone1[key]}`)
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

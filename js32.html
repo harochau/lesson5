@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        person = {};
+        person.name = 'Jonh';
+        person.age=25;
+        alert(`${person.name}:${person.age}`);
+        delete person.age;
+        if ('name'in person){
+            alert('Существует')
+        } else {
+            alert('Не существует')
+        }
+
+        person['name'] = 'Петя';
+        alert(person['name']);
+        person.age = 30;
+        let key = 'age';
+        alert(person[key]);
+    </script>
+
+</body>
+
+</html>
